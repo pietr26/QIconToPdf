@@ -29,7 +29,7 @@ void printQIcons()
 
     html += QString("</tr></table></body><br/><p><i>%1 Icons failed.</i></p></html>").arg(errors);
 
-    QString filename = QCoreApplication::applicationDirPath() + QString("/QIcons_%1_%2_%3.pdf").arg(QString(qVersion()).replace(".", "_"), QSysInfo().productType(), QSysInfo().productVersion());
+    QString filename = QCoreApplication::applicationDirPath() + QString("/QIcons_%1_%2_%3.pdf").arg(QString(qVersion()).replace(".", "-"), QSysInfo().productType(), QSysInfo().productVersion());
 
     if (QFile(filename).exists()) QFile(filename).remove();
 
